@@ -40,6 +40,8 @@
 
 #define SAFE_BOTTOM_TITLE_EDGE_TOP_HEIGHT  (IS_iPhoneX ? -15.f : 0.f)//底部按钮文案适配X后 上移的距离
 
+#define WEAK_SELF      __weak __typeof(&*self)weakSelf = self;
+
 #define SHARED_INSTANCE_H  + (instancetype)sharedInstance;
 #define SHARED_INSTANCE_M  \
 + (instancetype)sharedInstance \

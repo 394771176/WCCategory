@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "WCCategory.h"
+#import "WCDefine.h"
 #import "NSArray+Utils.h"
 #import "NSAttributedString+Utils.h"
 #import "NSDate+Utils.h"
@@ -30,8 +32,8 @@
 #import "UIView+animation.h"
 #import "UIView+Utils.h"
 #import "UIViewController+Utils.h"
-#import "WCCategory.h"
-#import "WCDefine.h"
+#import "NSData+md5.h"
+#import "NSString+md5.h"
 
 FOUNDATION_EXPORT double WCCategoryVersionNumber;
 FOUNDATION_EXPORT const unsigned char WCCategoryVersionString[];
