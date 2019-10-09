@@ -29,8 +29,8 @@
     v.backgroundColor = [UIColor colorWithString:@"ff2345"];
     [self.view addSubview:v];
     
-    NSString *str = @"";
-    str = str.md5Hash;
+//    NSString *str = @"";
+//    str = str.md5Hash;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -32,8 +32,6 @@
 #import "UIView+animation.h"
 #import "UIView+Utils.h"
 #import "UIViewController+Utils.h"
-#import "NSData+md5.h"
-#import "NSString+md5.h"
 
 FOUNDATION_EXPORT double WCCategoryVersionNumber;
 FOUNDATION_EXPORT const unsigned char WCCategoryVersionString[];
