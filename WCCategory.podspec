@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WCCategory'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'WCCategory'
 
 # This description is used to generate tags and improve search results.
@@ -37,11 +37,9 @@ Pod::Spec.new do |s|
 #  s.public_header_files = 'Pod/Classes/**/*.h'
 
   s.source_files = [
-  'WCCategory/Classes/*.h',
-  'WCCategory/Classes/Foundation/*.h',
-  'WCCategory/Classes/Foundation/*.m',
-  'WCCategory/Classes/UIKit/*.h',
-  'WCCategory/Classes/UIKit/*.m',
+  'WCCategory/Classes/*',
+  'WCCategory/Classes/Foundation/*',
+  'WCCategory/Classes/UIKit/*',
   ]
   
   s.public_header_files = [
@@ -50,17 +48,17 @@ Pod::Spec.new do |s|
   'WCCategory/Classes/UIKit/*.h',
   ]
   
-  # md5
-  s.subspec 'MD5' do |md|
-    md.source_files = [
-    'WCCategory/Classes/MD5/*.h',
-    'WCCategory/Classes/MD5/*.m'
-    ]
-    md.public_header_files = [
-    'WCCategory/Classes/MD5/*.h'
-    ]
-  end
-  
+#  # md5
+#  s.subspec 'MD5' do |md|
+#    md.source_files = [
+#    'WCCategory/Classes/MD5/*.h',
+#    'WCCategory/Classes/MD5/*.m'
+#    ]
+#    md.public_header_files = [
+#    'WCCategory/Classes/MD5/*.h'
+#    ]
+#  end
+
    s.frameworks = 'UIKit', 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
