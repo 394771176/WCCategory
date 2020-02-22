@@ -7,7 +7,7 @@
 //
 
 #import "UIButton+Utils.h"
-#import "WCCategory.h"
+#import "WCUIKitHeader.h"
 
 @implementation UIButton (Utils)
 

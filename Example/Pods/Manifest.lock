@@ -4,9 +4,12 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - WCCategory (0.1.1):
-    - WCCategory/MD5 (= 0.1.1)
-  - WCCategory/MD5 (0.1.1)
+  - WCCategory (0.1.2):
+    - WCCategory/Foundation (= 0.1.2)
+    - WCCategory/UIKit (= 0.1.2)
+  - WCCategory/Foundation (0.1.2)
+  - WCCategory/UIKit (0.1.2):
+    - WCCategory/Foundation
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -22,7 +25,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  WCCategory: b77effc1cf4447bb49cf26b851dc41819ac939dc
+  WCCategory: 5dd655a47d79e5ef810a0675b1cd51aeb7bf49c5
 
 PODFILE CHECKSUM: 0f007da959a77eef8779bd3f5db1946031f7c582
 

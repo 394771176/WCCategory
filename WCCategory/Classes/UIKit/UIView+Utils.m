@@ -7,7 +7,7 @@
 //
 
 #import "UIView+Utils.h"
-#import "WCCategory.h"
+#import "WCUIKitHeader.h"
 
 @implementation UIView (Frame)
 

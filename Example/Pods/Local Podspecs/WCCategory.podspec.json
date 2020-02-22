@@ -1,6 +1,6 @@
 {
   "name": "WCCategory",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "WCCategory",
   "description": "常见宏、常用基础类扩展方法",
   "homepage": "https://github.com/394771176/WCCategory",
@@ -13,22 +13,16 @@
   },
   "source": {
     "git": "https://github.com/394771176/WCCategory.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": [
-    "WCCategory/Classes/*.h",
-    "WCCategory/Classes/Foundation/*.h",
-    "WCCategory/Classes/Foundation/*.m",
-    "WCCategory/Classes/UIKit/*.h",
-    "WCCategory/Classes/UIKit/*.m"
+    "WCCategory/Classes/*.h"
   ],
   "public_header_files": [
-    "WCCategory/Classes/*.h",
-    "WCCategory/Classes/Foundation/*.h",
-    "WCCategory/Classes/UIKit/*.h"
+    "WCCategory/Classes/*.h"
   ],
   "frameworks": [
     "UIKit",
@@ -36,14 +30,31 @@
   ],
   "subspecs": [
     {
-      "name": "MD5",
+      "name": "Foundation",
       "source_files": [
-        "WCCategory/Classes/MD5/*.h",
-        "WCCategory/Classes/MD5/*.m"
+        "WCCategory/Classes/Foundation/*.h",
+        "WCCategory/Classes/Foundation/*.m"
       ],
       "public_header_files": [
-        "WCCategory/Classes/MD5/*.h"
-      ]
+        "WCCategory/Classes/Foundation/*.h"
+      ],
+      "frameworks": "CoreText"
+    },
+    {
+      "name": "UIKit",
+      "source_files": [
+        "WCCategory/Classes/UIKit/*.h",
+        "WCCategory/Classes/UIKit/*.m"
+      ],
+      "public_header_files": [
+        "WCCategory/Classes/UIKit/*.h"
+      ],
+      "frameworks": "QuartzCore",
+      "dependencies": {
+        "WCCategory/Foundation": [
+
+        ]
+      }
     }
   ]
 }

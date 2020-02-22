@@ -13,14 +13,14 @@
  */
 @interface UINavigationController (PopAfterPush)
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated complete:(void (^)(void))complete;
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated complete:(void (^)(void))completion;
 
 - (void)pushViewControllerWithPopOneController:(UIViewController *)viewController;
-- (void)pushViewControllerWithPopOneController:(UIViewController *)viewController AndAnimated:(BOOL)animated;
 
-- (void)pushViewControllerWithPopRootController:(UIViewController *)viewController;
-- (void)pushViewControllerController:(UIViewController *)viewController withPopToController:(Class)popClass;
-- (void)pushViewControllerController:(UIViewController *)viewController withPopToIndex:(NSInteger)index;
+- (void)pushViewControllerWithPopToRootController:(UIViewController *)viewController;
+
+- (void)pushViewControllerController:(UIViewController *)viewController withPopToControllerClass:(Class)popClass;
+
 //跳转页面时 移除队列指定class的vc
 - (void)pushViewController:(UIViewController *)viewController withPopControllerClass:(Class)popClass;
 - (void)addControllerToBackActionIndex:(UIViewController *)controller;

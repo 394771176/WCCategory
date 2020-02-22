@@ -7,7 +7,7 @@
 //
 
 #import "UILabel+Utils.h"
-#import "WCCategory.h"
+#import "WCUIKitHeader.h"
 
 @implementation UILabel (Utils)
 

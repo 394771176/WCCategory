@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+Utils.h"
-#import "WCCategory.h"
+#import "WCUIKitHeader.h"
 
 @implementation UIViewController (addtions)
 

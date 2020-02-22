@@ -7,7 +7,7 @@
 //
 
 #import "UIImage+Utils.h"
-#import "WCCategory.h"
+#import "WCUIKitHeader.h"
 
 UIImage *FFPlaceholderImageWithSize(CGSize size) {
     return FFPlaceholderImageWithSizeAndColor(size, nil);

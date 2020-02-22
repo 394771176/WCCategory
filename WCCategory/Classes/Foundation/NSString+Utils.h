@@ -96,7 +96,7 @@ extern NSString *FFHighlightColorStr(NSString *string);
 
 - (NSURL *)serializeURLWithParams:(NSDictionary *)params httpMethod:(NSString *)httpMethod;
 
-- (NSMutableAttributedString *)HTMLAttributedString;
+//- (NSMutableAttributedString *)HTMLAttributedString;
 
 @end
 

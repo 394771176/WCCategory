@@ -7,7 +7,8 @@
 //
 
 #import "NSString+Utils.h"
-#import "WCCategory.h"
+//#import "WCCategory.h"
+#import "WCFoundationHeader.h"
 
 NSString *FFPlaceholderChar() {
     unichar objectReplacementChar = 0xFFFC;
@@ -449,50 +450,50 @@ NSString *FFHighlightColorStr(NSString *string)
     return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", self, queryPrefix, query]];
 }
 
-//MARK: - attributedString
-// <font color='gray'>意犹未尽？</font><font color='#4f91f3'>超值车品独家底价，去看看吧！</font>
-- (NSMutableAttributedString *)HTMLAttributedString
-{
-    if ([self rangeOfString:@"</font>"].length > 0) {
-        NSMutableAttributedString *attString = nil;
-        
-        NSRange headerRange = [self rangeOfString:@"<font"];
-        if (headerRange.location > 0) {
-            attString = [[NSMutableAttributedString alloc] initWithString:[self substringToIndex:headerRange.location]];
-        } else {
-            attString = [[NSMutableAttributedString alloc] init];
-        }
-        
-        NSArray *componentsArray = [[self substringFromIndex:headerRange.location] componentsSeparatedByString:@"</font>"];
-        
-        for (NSString *comString in componentsArray) {
-            if (comString.length > 0 && [comString hasPrefix:@"<font"]) {
-                NSRange range = [comString rangeOfString:@">"];
-                NSString *itemString = [comString substringFromIndex:range.location + range.length];
-                
-                NSString *fontString = [[comString substringToIndex:range.location] stringByReplacingOccurrencesOfString:@" " withString:@""];
-                NSString *colorString = nil;
-                if ([fontString rangeOfString:@"color="].length > 0) {
-                    NSRange colorRange = [fontString rangeOfString:@"color="];
-                    NSString *tmpColorString = [fontString substringFromIndex:colorRange.location + colorRange.length];
-                    if (tmpColorString.length > 0) {
-                        colorString = [tmpColorString stringByReplacingOccurrencesOfString:[tmpColorString substringToIndex:1] withString:@""];
-                    }
-                }
-                NSAttributedString *tempAttString = nil;
-                if (colorString.length > 0 && [colorString hasPrefix:@"#"]) {
-                    tempAttString = [[NSAttributedString alloc] initWithString:itemString attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:colorString]}];
-                } else {
-                    tempAttString = [[NSAttributedString alloc] initWithString:itemString attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"313131"]}];
-                }
-                [attString appendAttributedString:tempAttString];
-            }
-        }
-        return attString;
-    } else {
-        return [[NSMutableAttributedString alloc] initWithString:self];
-    }
-}
+////MARK: - attributedString
+//// <font color='gray'>意犹未尽？</font><font color='#4f91f3'>超值车品独家底价，去看看吧！</font>
+//- (NSMutableAttributedString *)HTMLAttributedString
+//{
+//    if ([self rangeOfString:@"</font>"].length > 0) {
+//        NSMutableAttributedString *attString = nil;
+//        
+//        NSRange headerRange = [self rangeOfString:@"<font"];
+//        if (headerRange.location > 0) {
+//            attString = [[NSMutableAttributedString alloc] initWithString:[self substringToIndex:headerRange.location]];
+//        } else {
+//            attString = [[NSMutableAttributedString alloc] init];
+//        }
+//        
+//        NSArray *componentsArray = [[self substringFromIndex:headerRange.location] componentsSeparatedByString:@"</font>"];
+//        
+//        for (NSString *comString in componentsArray) {
+//            if (comString.length > 0 && [comString hasPrefix:@"<font"]) {
+//                NSRange range = [comString rangeOfString:@">"];
+//                NSString *itemString = [comString substringFromIndex:range.location + range.length];
+//                
+//                NSString *fontString = [[comString substringToIndex:range.location] stringByReplacingOccurrencesOfString:@" " withString:@""];
+//                NSString *colorString = nil;
+//                if ([fontString rangeOfString:@"color="].length > 0) {
+//                    NSRange colorRange = [fontString rangeOfString:@"color="];
+//                    NSString *tmpColorString = [fontString substringFromIndex:colorRange.location + colorRange.length];
+//                    if (tmpColorString.length > 0) {
+//                        colorString = [tmpColorString stringByReplacingOccurrencesOfString:[tmpColorString substringToIndex:1] withString:@""];
+//                    }
+//                }
+//                NSAttributedString *tempAttString = nil;
+//                if (colorString.length > 0 && [colorString hasPrefix:@"#"]) {
+//                    tempAttString = [[NSAttributedString alloc] initWithString:itemString attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:colorString]}];
+//                } else {
+//                    tempAttString = [[NSAttributedString alloc] initWithString:itemString attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"313131"]}];
+//                }
+//                [attString appendAttributedString:tempAttString];
+//            }
+//        }
+//        return attString;
+//    } else {
+//        return [[NSMutableAttributedString alloc] initWithString:self];
+//    }
+//}
 
 @end
 

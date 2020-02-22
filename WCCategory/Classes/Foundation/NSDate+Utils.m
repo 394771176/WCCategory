@@ -7,7 +7,8 @@
 //
 
 #import "NSDate+Utils.h"
-#import "WCCategory.h"
+//#import "WCCategory.h"
+#import "WCFoundationHeader.h"
 
 @implementation NSDate (Utils)
 
