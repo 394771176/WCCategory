@@ -73,15 +73,15 @@ s.public_header_files =
 #  end
 
 # Define
-#s.subspec 'Define' do |de|
-#  de.source_files = [
-#  'WCCategory/Classes/Define/*.h',
-#  ]
-#
-#  de.public_header_files = [
-#  'WCCategory/Classes/Define/*.h',
-#  ]
-#end
+s.subspec 'Define' do |de|
+  de.source_files = [
+  'WCCategory/Classes/Define/*.h',
+  ]
+
+  de.public_header_files = [
+  'WCCategory/Classes/Define/*.h',
+  ]
+end
 
 # Foundation
 s.subspec 'Foundation' do |fd|
@@ -94,7 +94,7 @@ s.subspec 'Foundation' do |fd|
 	'WCCategory/Classes/Foundation/*.h',
 	]
 	fd.frameworks = 'CoreText'
-#  fd.dependency 'WCCategory/Define'
+  fd.dependency 'WCCategory/Define'
 end
 
 # UIKit
