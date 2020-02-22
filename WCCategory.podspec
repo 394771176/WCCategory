@@ -37,9 +37,12 @@ Pod::Spec.new do |s|
 #  s.public_header_files = 'Pod/Classes/**/*.h'
 
   s.source_files = [
-  'WCCategory/Classes/*',
-  'WCCategory/Classes/Foundation/*',
-  'WCCategory/Classes/UIKit/*',
+  'WCCategory/Classes/*.h',
+  'WCCategory/Classes/*.m',
+  'WCCategory/Classes/Foundation/*.h',
+  'WCCategory/Classes/Foundation/*.m',
+  'WCCategory/Classes/UIKit/*.h',
+  'WCCategory/Classes/UIKit/*.m',
   ]
   
   s.public_header_files = [
