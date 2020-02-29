@@ -571,10 +571,10 @@ NSString *FFHighlightColorStr(NSString *string)
         return (chinese ? @"未知" : @"unknow");
     } else {
         if (distance < 1000) {
-            NSString unit = (chinese ? @"米" : @"m");
+            NSString *unit = (chinese ? @"米" : @"m");
             return [NSString stringWithFormat:@"%.0f%@", distance, unit];
         } else {
-            NSString unit = (chinese ? @"千米" : @"km");
+            NSString *unit = (chinese ? @"千米" : @"km");
             if (distance < 10000) {
                 return [NSString stringWithFormat:@"%.1f%@", distance/1000.0f, unit];
             } else {
@@ -630,7 +630,7 @@ NSString *FFHighlightColorStr(NSString *string)
         
         CGFloat value = num * 1.f / from;
         //因为去一位小数，会根据第二位的小数 四舍五入
-        if (value * 100 % 100 < 5) {
+        if (((NSInteger)(value * 100)) % 100 < 5) {
             return [NSString stringWithFormat:@"%.0f%@", value, unit];
         } else {
             return [NSString stringWithFormat:@"%.1f%@", value, unit];
