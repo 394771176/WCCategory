@@ -9,7 +9,13 @@
 #import "NSAttributedString+Utils.h"
 #import <CoreText/CoreText.h>
 //#import "WCCategory.h"
-#import "WCCategory.h"
+#import "WCCategory+NS.h"
+
+#if __has_include(<WCCategory/WCCategory+UI.h>)
+
+#import "WCCategory+UI.h"
+
+#endif
 
 #define SetParagraphStyle(_attr_) \
 [self enumerateAttribute:NSParagraphStyleAttributeName \
