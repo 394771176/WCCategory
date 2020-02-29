@@ -551,6 +551,95 @@ NSString *FFHighlightColorStr(NSString *string)
 
 @end
 
+@implementation NSString (format)
+
+//距离 m, km
++ (NSString *)formatDistance:(CGFloat)distance
+{
+    return [self formatDistance:distance chinese:NO];
+}
+
+//距离 米, 千米
++ (NSString *)formatDistanceChinese:(CGFloat)distance
+{
+    return [self formatDistance:distance chinese:YES];
+}
+
++ (NSString *)formatDistance:(CGFloat)distance chinese:(BOOL)chinese
+{
+    if (distance > 999 * 1000) {
+        return (chinese ? @"未知" : @"unknow");
+    } else {
+        if (distance < 1000) {
+            NSString unit = (chinese ? @"米" : @"m");
+            return [NSString stringWithFormat:@"%.0f%@", distance, unit];
+        } else {
+            NSString unit = (chinese ? @"千米" : @"km");
+            if (distance < 10000) {
+                return [NSString stringWithFormat:@"%.1f%@", distance/1000.0f, unit];
+            } else {
+                return [NSString stringWithFormat:@"%.0f%@", distance/1000.0f, unit];
+            }
+        }
+    }
+}
+
+//数目 - k, w, 10w
++ (NSString *)formatNum1K:(NSInteger)num
+{
+    return [self formatNum:num from:1000 chinese:NO];
+}
+
++ (NSString *)formatNum1W:(NSInteger)num
+{
+    return [self formatNum:num from:10000 chinese:NO];
+}
+
++ (NSString *)formatNum10W:(NSInteger)num
+{
+    return [self formatNum:num from:100000 chinese:NO];
+}
+
+//数目 - 千， 万， 10万
++ (NSString *)formatNum1KChinese:(NSInteger)num
+{
+    return [self formatNum:num from:1000 chinese:YES];
+}
+
++ (NSString *)formatNum1WChinese:(NSInteger)num
+{
+    return [self formatNum:num from:10000 chinese:YES];
+}
+
++ (NSString *)formatNum10WChinese:(NSInteger)num
+{
+    return [self formatNum:num from:100000 chinese:YES];
+}
+
++ (NSString *)formatNum:(NSInteger)num from:(NSInteger)from chinese:(NSInteger)chinese
+{
+    if (num < from) {
+        return [NSString stringWithFormat:@"%zd", num];
+    } else {
+        NSString *unit = nil;
+        if (from < 2000) {
+            unit = (chinese ? @"千" : @"k");
+        } else {
+            unit = (chinese ? @"万" : @"w");
+        }
+        
+        CGFloat value = num * 1.f / from;
+        //因为去一位小数，会根据第二位的小数 四舍五入
+        if (value * 100 % 100 < 5) {
+            return [NSString stringWithFormat:@"%.0f%@", value, unit];
+        } else {
+            return [NSString stringWithFormat:@"%.1f%@", value, unit];
+        }
+    }
+}
+
+@end
+
 @implementation NSString (Money)
 
 + (NSString *)translateMoneyToString:(CGFloat)money
