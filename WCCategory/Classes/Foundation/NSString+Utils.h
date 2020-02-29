@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 // 占位符
-extern NSString *FFPlaceholderChar();
+extern NSString *FFPlaceholderChar(void);
 extern NSString *FFHighlightColorStr(NSString *string);
 
 @interface NSString (Utils)
@@ -87,8 +87,7 @@ extern NSString *FFHighlightColorStr(NSString *string);
 - (NSString *)getUrlParamValueForkey:(NSString *)key;
 
 /*
- key没有则添加
- 有则更换value
+ key没有则添加，有则更换value
  */
 - (NSString *)setUrlParamsValue:(NSString *)value forKey:(NSString *)key;
 

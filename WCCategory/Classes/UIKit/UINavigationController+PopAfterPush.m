@@ -7,7 +7,7 @@
 //
 
 #import "UINavigationController+PopAfterPush.h"
-#import "WCUIKitHeader.h"
+#import "WCCategory+UI.h"
 
 @implementation UINavigationController (PopAfterPush)
 
@@ -63,7 +63,7 @@
     }];
 }
 
-- (void)addControllerToBackActionIndex:(UIViewController *)controller
+- (void)insertControllerForBackAction:(UIViewController *)controller
 {
     if (!controller) {
         return;
@@ -77,9 +77,10 @@
     self.viewControllers = newControlls;
 }
 
-- (void)pushViewControllerController:(UIViewController *)viewController withPopToControllerIndex:(NSInteger)index
+- (void)insertControllerAndDidBackAction:(UIViewController *)controller
 {
-    
+    [self insertControllerForBackAction:controller];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //跳转页面时 移除队列指定class的vc
@@ -92,10 +93,10 @@
             UIViewController *vc = [controllerList safeObjectAtIndex:index];
             if ([vc isKindOfClass:popClass]) {
                 [controllerList removeObjectAtIndex:index];
-                self.viewControllers = [NSArray arrayWithArray:controllerList];
             }
             index --;
         }
+        self.viewControllers = [NSArray arrayWithArray:controllerList];
     }];
 }
 

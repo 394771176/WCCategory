@@ -8,9 +8,9 @@
 
 #import "NSString+Utils.h"
 //#import "WCCategory.h"
-#import "WCFoundationHeader.h"
+#import "WCCategory+NS.h"
 
-NSString *FFPlaceholderChar() {
+NSString *FFPlaceholderChar(void) {
     unichar objectReplacementChar = 0xFFFC;
     return [NSString stringWithCharacters:&objectReplacementChar length:1];
 }

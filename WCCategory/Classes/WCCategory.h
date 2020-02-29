@@ -11,18 +11,17 @@
 
 #import "WCDefine.h"
 
-#if __has_include(<WCCategory/WCFoundationHeader.h>)
+#if __has_include(<WCCategory/WCCategory+NS.h>)
 
-#import "WCFoundationHeader.h"
-
-#endif
-
-
-#if __has_include(<WCCategory/WCUIKitHeader.h>)
-
-#import "WCUIKitHeader.h"
+#import "WCCategory+NS.h"
 
 #endif
 
+
+#if __has_include(<WCCategory/WCCategory+UI.h>)
+
+#import "WCCategory+UI.h"
+
+#endif
 
 #endif /* WCCategory_h */

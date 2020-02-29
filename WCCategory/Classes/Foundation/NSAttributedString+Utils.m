@@ -9,7 +9,7 @@
 #import "NSAttributedString+Utils.h"
 #import <CoreText/CoreText.h>
 //#import "WCCategory.h"
-#import "WCFoundationHeader.h"
+#import "WCCategory.h"
 
 #define SetParagraphStyle(_attr_) \
 [self enumerateAttribute:NSParagraphStyleAttributeName \
@@ -61,15 +61,19 @@ style. _attr_ = _attr_; \
     return [self string:string rangeText:text font:[UIFont systemFontOfSize:fontSize]];
 }
 
-//+ (NSAttributedString *)string:(NSString *)string rangeText:(NSString *)text colorString:(NSString *)colorString
-//{
-//    return [self string:string rangeText:text font:nil color:[UIColor colorWithHexString:colorString]];
-//}
-//
-//+ (NSAttributedString *)string:(NSString *)string rangeText:(NSString *)text fontSize:(CGFloat)fontSize colorString:(NSString *)colorString
-//{
-//    return [self string:string rangeText:text font:[UIFont systemFontOfSize:fontSize] color:(colorString?[UIColor colorWithHexString:colorString] : nil)];
-//}
+#if __has_include(<WCCategory/WCCategory+UI.h>)
+
++ (NSAttributedString *)string:(NSString *)string rangeText:(NSString *)text colorString:(NSString *)colorString
+{
+    return [self string:string rangeText:text font:nil color:(colorString?[UIColor colorWithHexString:colorString] : nil)];
+}
+
++ (NSAttributedString *)string:(NSString *)string rangeText:(NSString *)text fontSize:(CGFloat)fontSize colorString:(NSString *)colorString
+{
+    return [self string:string rangeText:text font:[UIFont systemFontOfSize:fontSize] color:(colorString?[UIColor colorWithHexString:colorString] : nil)];
+}
+
+#endif
 
 + (NSAttributedString *)string:(NSString *)string rangeText:(NSString *)text font:(UIFont *)font color:(UIColor *)color
 {

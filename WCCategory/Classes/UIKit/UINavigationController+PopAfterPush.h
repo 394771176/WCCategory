@@ -23,7 +23,11 @@
 
 //跳转页面时 移除队列指定class的vc
 - (void)pushViewController:(UIViewController *)viewController withPopControllerClass:(Class)popClass;
-- (void)addControllerToBackActionIndex:(UIViewController *)controller;
+
+//返回的前面插入一个界面
+- (void)insertControllerForBackAction:(UIViewController *)controller;
+//返回的前面插入一个界面，同时执行返回操作
+- (void)insertControllerAndDidBackAction:(UIViewController *)controller;
 
 - (id)findControllerWithControllerClass:(Class)controllerClass;
 - (id)findControllerWithControllerClass:(Class)controllerClass compareBlock:(BOOL (^)(id controller))compareBlock;

@@ -10,13 +10,16 @@
 
 @implementation UITableView (Utils)
 
-- (CGFloat)totalHeightForRowToSection:(NSInteger)section target:(id<UITableViewDelegate, UITableViewDataSource>)target
+- (CGFloat)totalHeightForCellToIndexPath:(NSIndexPath *)indexPath target:(id<UITableViewDelegate, UITableViewDataSource>)target
 {
     CGFloat lastBottom = 0.f;
     if ([target respondsToSelector:@selector(tableView:numberOfRowsInSection:)] && [target respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
-        for (NSInteger sec = 0; sec < section; sec ++) {
+        for (NSInteger sec = 0; sec <= indexPath.section; sec ++) {
             NSInteger rowCount = [target tableView:self numberOfRowsInSection:sec];
-            for (NSInteger row = 0; row < rowCount; row ++ ) {
+            if (sec == indexPath.section) {
+                rowCount = indexPath.row;
+            }
+            for (NSInteger row = 0; row < rowCount; row ++) {
                 NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:sec];
                 lastBottom += ([target tableView:self heightForRowAtIndexPath:indexPath]);
             }
@@ -47,31 +50,20 @@
     return lastBottom;
 }
 
-- (CGFloat)totalHeightForAllToSection:(NSInteger)section target:(id<UITableViewDelegate,UITableViewDataSource>)target
+- (CGFloat)totalHeightToSection:(NSInteger)section target:(id<UITableViewDelegate, UITableViewDataSource>)target
 {
-    return [self totalHeightForRowToSection:section target:target withHeader:YES withFooter:YES];
+    CGFloat height = [self totalHeightForCellToIndexPath:[NSIndexPath indexPathForRow:0 inSection:section] target:target];
+    height += ([self totalHeightForHeaderToSection:section target:target]);
+    height += ([self totalHeightForFooterToSection:section target:target]);
+    return height;
 }
 
-- (CGFloat)totalHeightForRowAndHeaderToSection:(NSInteger)section target:(id<UITableViewDelegate,UITableViewDataSource>)target
+- (CGFloat)totalHeightToIndexPath:(NSIndexPath *)indexPath target:(id<UITableViewDelegate,UITableViewDataSource>)target
 {
-    return [self totalHeightForRowToSection:section target:target withHeader:YES withFooter:NO];
-}
-
-- (CGFloat)totalHeightForRowAndFooterToSection:(NSInteger)section target:(id<UITableViewDelegate,UITableViewDataSource>)target
-{
-    return [self totalHeightForRowToSection:section target:target withHeader:NO withFooter:YES];
-}
-
-- (CGFloat)totalHeightForRowToSection:(NSInteger)section target:(id<UITableViewDelegate,UITableViewDataSource>)target withHeader:(BOOL)header withFooter:(BOOL)footter
-{
-    CGFloat lastBottom = [self totalHeightForRowToSection:section target:target];
-    if (header) {
-        lastBottom += ([self totalHeightForHeaderToSection:section target:target]);
-    }
-    if (footter) {
-        lastBottom += ([self totalHeightForFooterToSection:section target:target]);
-    }
-    return lastBottom;
+    CGFloat height = [self totalHeightForCellToIndexPath:indexPath target:target];
+    height += ([self totalHeightForHeaderToSection:indexPath.section + 1 target:target]);
+    height += ([self totalHeightForFooterToSection:indexPath.section target:target]);
+    return height;
 }
 
 @end

@@ -1,12 +1,12 @@
 //
-//  WCFoundationHeader.h
+//  WCCategory+NS.h
 //  Pods
 //
-//  Created by cheng on 2020/2/22.
+//  Created by cheng on 2020/2/29.
 //
 
-#ifndef WCFoundationHeader_h
-#define WCFoundationHeader_h
+#ifndef WCCategory_NS_h
+#define WCCategory_NS_h
 
 #import "WCDefine.h"
 
@@ -18,6 +18,4 @@
 #import "NSDate+Utils.h"
 #import "NSURL+Utils.h"
 
-//#import "UIColor+Util.h"
-
-#endif /* WCFoundationHeader_h */
+#endif /* WCCategory_NS_h */

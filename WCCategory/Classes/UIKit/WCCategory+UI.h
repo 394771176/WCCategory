@@ -1,14 +1,14 @@
 //
-//  WCUIKitHeader.h
+//  WCCategory+UI.h
 //  Pods
 //
-//  Created by cheng on 2020/2/22.
+//  Created by cheng on 2020/2/29.
 //
 
-#ifndef WCUIKitHeader_h
-#define WCUIKitHeader_h
+#ifndef WCCategory_UI_h
+#define WCCategory_UI_h
 
-#import "WCFoundationHeader.h"
+#import "WCCategory+NS.h"
 
 #import "UIColor+Util.h"
 #import "UIImage+Utils.h"
@@ -20,6 +20,8 @@
 #import "UIImageView+Utils.h"
 #import "UITableView+Utils.h"
 #import "UIViewController+Utils.h"
+
+#import "UIView+animation.h"
 #import "UINavigationController+PopAfterPush.h"
 
-#endif /* WCUIKitHeader_h */
+#endif /* WCCategory_UI_h */
