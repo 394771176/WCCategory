@@ -17,3 +17,10 @@
 - (CGFloat)totalHeightToIndexPath:(NSIndexPath *)indexPath target:(id<UITableViewDelegate, UITableViewDataSource>)target;
 
 @end
+
+@interface UITableView (DTInsetTab)
+
+@property (nonatomic, assign) BOOL shouldRecognizeSimultaneouslyDT;
+@property (nonatomic, weak) UITableView *anotherTable;
+
+@end

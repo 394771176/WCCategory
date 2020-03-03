@@ -18,4 +18,6 @@
 #import "NSDate+Utils.h"
 #import "NSURL+Utils.h"
 
+#import "NSJSONHelper.h"
+
 #endif /* WCCategory_NS_h */

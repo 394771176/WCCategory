@@ -7,6 +7,7 @@
 //
 
 #import "UITableView+Utils.h"
+#import <objc/runtime.h>
 
 @implementation UITableView (Utils)
 
@@ -64,6 +65,36 @@
     height += ([self totalHeightForHeaderToSection:indexPath.section + 1 target:target]);
     height += ([self totalHeightForFooterToSection:indexPath.section target:target]);
     return height;
+}
+
+@end
+
+
+@implementation UITableView (DTInsetTab)
+
+- (void)setAnotherTable:(UITableView *)anotherTable
+{
+    objc_setAssociatedObject(self, @selector(anotherTable), anotherTable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UITableView *)anotherTable
+{
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setShouldRecognizeSimultaneouslyDT:(BOOL)shouldRecognizeSimultaneouslyDT
+{
+    objc_setAssociatedObject(self, @selector(shouldRecognizeSimultaneouslyDT), @(shouldRecognizeSimultaneouslyDT), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)shouldRecognizeSimultaneouslyDT
+{
+    return[objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return self.shouldRecognizeSimultaneouslyDT && (!self.anotherTable || otherGestureRecognizer.view == self.anotherTable);
 }
 
 @end
