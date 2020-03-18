@@ -34,7 +34,7 @@
 {
     CGFloat lastBottom = 0.f;
     if (self.tableHeaderView) {
-        lastBottom += self.tableHeaderView;
+        lastBottom += self.tableHeaderView.height;
     }
     if ([target respondsToSelector:@selector(tableView:heightForHeaderInSection:)]) {
         for (NSInteger sec = 0; sec < section; sec ++) {
