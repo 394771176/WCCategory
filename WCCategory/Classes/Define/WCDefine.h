@@ -46,6 +46,8 @@
 
 #define CELL_ID(str)        static NSString *cellId = @#str;
 
+#define KEY(str)        static NSString * const str = @#str;
+
 #define URL(str)            [NSURL URLWithString:str]
 
 #define RGB(r, g, b)        RGBA(r, g, b, 1)

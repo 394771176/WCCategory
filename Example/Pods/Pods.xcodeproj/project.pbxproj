@@ -38,6 +38,10 @@
 		5652CBE7A921B14E4942B68EF9E82F84 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C51BEF6AF8B7D417B1C8EAD222AA4D6F /* UIImage+Utils.m */; };
 		59B923931913E9411FD1A4EA019DA1C9 /* NSDate+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C001AF81876BCAF2ECEDD79FB9A836A /* NSDate+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CA9C7C863902CE17B80F384A8703387 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF153FAC70D402E51F7981BF3E2ED76D /* Foundation.framework */; };
+		605A5DBC243F95A1000FBBDE /* NSData+md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 605A5DB8243F95A1000FBBDE /* NSData+md5.h */; };
+		605A5DBD243F95A1000FBBDE /* NSString+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A5DB9243F95A1000FBBDE /* NSString+md5.m */; };
+		605A5DBE243F95A1000FBBDE /* NSData+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A5DBA243F95A1000FBBDE /* NSData+md5.m */; };
+		605A5DBF243F95A1000FBBDE /* NSString+md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 605A5DBB243F95A1000FBBDE /* NSString+md5.h */; };
 		6AE239C5D116E1C06F5705699FB9EAF0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355C832858EF02CAC536AB5F567A131A /* XCTest.framework */; };
 		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */; };
 		6E139932597AAFFB5FF9B3F2C466A579 /* WCCategory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D314A2F70FC786E8E3EE1CD5339F64E5 /* WCCategory-dummy.m */; };
@@ -118,15 +122,15 @@
 		078E66AB4B956D0452028C92296265A2 /* NSString+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "WCCategory/Classes/Foundation/NSString+Utils.m"; sourceTree = "<group>"; };
 		0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		0F8AD3A48737C3FE74517082737C4486 /* NSDate+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Utils.m"; path = "WCCategory/Classes/Foundation/NSDate+Utils.m"; sourceTree = "<group>"; };
-		10E469F4FB8DFB866A1DE77832230C8A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		10E469F4FB8DFB866A1DE77832230C8A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		117040F9E64BDEB37FDAE491D5F3EC2A /* Pods-WCCategory_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WCCategory_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		11803D9CE94908FFE2409121650E35DA /* UIView+animation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+animation.h"; path = "WCCategory/Classes/UIKit/UIView+animation.h"; sourceTree = "<group>"; };
 		13C8BBFE2D9E3A9C566221B1DE04E91C /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		14B4C86B42062C9B3F8ACE8FF370C0FE /* WCCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WCCategory.framework; path = WCCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B4C86B42062C9B3F8ACE8FF370C0FE /* WCCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E49DDC51089053FEB3A87012E7DC1A /* Pods-WCCategory_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WCCategory_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		19F08186345236225BD9FD01E09DE5E0 /* UIButton+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Utils.m"; path = "WCCategory/Classes/UIKit/UIButton+Utils.m"; sourceTree = "<group>"; };
 		1A538EFF5DB09A081A096B350D48AF93 /* NSObject+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Utils.h"; path = "WCCategory/Classes/Foundation/NSObject+Utils.h"; sourceTree = "<group>"; };
-		1AFBA105DCAC6BE05F87D5E482965084 /* Pods_WCCategory_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WCCategory_Example.framework; path = "Pods-WCCategory_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AFBA105DCAC6BE05F87D5E482965084 /* Pods_WCCategory_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCCategory_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8ABEEA76ECDF1975B6D0787700F929 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		1C001AF81876BCAF2ECEDD79FB9A836A /* NSDate+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Utils.h"; path = "WCCategory/Classes/Foundation/NSDate+Utils.h"; sourceTree = "<group>"; };
 		1C2A736407B6AE198E3FEAD7BE04BD6E /* NSObject+DTFix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DTFix.m"; path = "WCCategory/Classes/Foundation/NSObject+DTFix.m"; sourceTree = "<group>"; };
@@ -134,7 +138,7 @@
 		1C700F3C52E4BA07C12BCA3FDDE48EDA /* UIDevice+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+Utils.h"; path = "WCCategory/Classes/UIKit/UIDevice+Utils.h"; sourceTree = "<group>"; };
 		1D606628122D9C1FCF69D76913FAB9F6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		239E4F3E8DC04A0DE8ECC3ED65EB868B /* Pods-WCCategory_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WCCategory_Example-dummy.m"; sourceTree = "<group>"; };
-		23E12A41211827972B803466F8EEFE98 /* WCCategory.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WCCategory.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		23E12A41211827972B803466F8EEFE98 /* WCCategory.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WCCategory.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		28DEA7717BE72A7F116CE1575AEB6CBB /* Pods-WCCategory_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WCCategory_Example-umbrella.h"; sourceTree = "<group>"; };
 		2B961166DB904BA9933ACEAF3797F241 /* WCCategory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCCategory.xcconfig; sourceTree = "<group>"; };
 		355C832858EF02CAC536AB5F567A131A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -153,12 +157,16 @@
 		4D44A75FA7C3A72B89328A2879E59365 /* Pods-WCCategory_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WCCategory_Tests-umbrella.h"; sourceTree = "<group>"; };
 		4DF3B29E0F548AED81DB0D342764370C /* WCCategory+UI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WCCategory+UI.h"; path = "WCCategory/Classes/UIKit/WCCategory+UI.h"; sourceTree = "<group>"; };
 		5443A229D66F4AA7E89716D4633D1A7F /* UIColor+Util.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Util.h"; path = "WCCategory/Classes/UIKit/UIColor+Util.h"; sourceTree = "<group>"; };
-		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D963FA52F46E685248BB1C7AB2C20B2 /* UITableView+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Utils.m"; path = "WCCategory/Classes/UIKit/UITableView+Utils.m"; sourceTree = "<group>"; };
 		5DAB83297E036E319E8B46196AB542A0 /* NSAttributedString+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+Utils.h"; path = "WCCategory/Classes/Foundation/NSAttributedString+Utils.h"; sourceTree = "<group>"; };
 		5E19D2C95345420736DE0EB21F6CAC0A /* UIView+animation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+animation.m"; path = "WCCategory/Classes/UIKit/UIView+animation.m"; sourceTree = "<group>"; };
-		5E54758C9571F896432060B6B9B03EF5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5E54758C9571F896432060B6B9B03EF5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5EC406873DAA4F0C333A6CAC0E144A46 /* Pods-WCCategory_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WCCategory_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		605A5DB8243F95A1000FBBDE /* NSData+md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+md5.h"; sourceTree = "<group>"; };
+		605A5DB9243F95A1000FBBDE /* NSString+md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+md5.m"; sourceTree = "<group>"; };
+		605A5DBA243F95A1000FBBDE /* NSData+md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+md5.m"; sourceTree = "<group>"; };
+		605A5DBB243F95A1000FBBDE /* NSString+md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+md5.h"; sourceTree = "<group>"; };
 		61E551B46ED4C1F389FB05AB268C082C /* WCCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCCategory.h; path = WCCategory/Classes/WCCategory.h; sourceTree = "<group>"; };
 		66D091C3C378C0B3A6CE711FC52DEC94 /* WCCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCCategory-prefix.pch"; sourceTree = "<group>"; };
 		67709B27C7995245BF446BA88159DC0E /* NSAttributedString+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+Utils.m"; path = "WCCategory/Classes/Foundation/NSAttributedString+Utils.m"; sourceTree = "<group>"; };
@@ -179,7 +187,7 @@
 		98FD387DFA194173633270BAF1BCD859 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		9958A45FC1BD6A308031F70B04B37C9D /* UIViewController+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Utils.m"; path = "WCCategory/Classes/UIKit/UIViewController+Utils.m"; sourceTree = "<group>"; };
 		9D5B89FFCFC99EB4591CD68635B365A6 /* Pods-WCCategory_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WCCategory_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EB4FFCAC0210962CB71F736CED4FF0E /* Pods-WCCategory_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WCCategory_Example.modulemap"; sourceTree = "<group>"; };
 		A06A030E658DE5C624564C338B245909 /* UIImage+QRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+QRCode.h"; path = "WCCategory/Classes/UIKit/UIImage+QRCode.h"; sourceTree = "<group>"; };
 		A0F1C6D8D2B68A6F441E3184C4836A26 /* Pods-WCCategory_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WCCategory_Example-Info.plist"; sourceTree = "<group>"; };
@@ -204,7 +212,7 @@
 		CFDCC4635B15565B798EF9D4FCEFE4C8 /* Pods-WCCategory_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WCCategory_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D3067EAFD5B0A06885968D137840DB70 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		D314A2F70FC786E8E3EE1CD5339F64E5 /* WCCategory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCCategory-dummy.m"; sourceTree = "<group>"; };
-		D32A0A98733713762912D9F98818890D /* Pods_WCCategory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WCCategory_Tests.framework; path = "Pods-WCCategory_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32A0A98733713762912D9F98818890D /* Pods_WCCategory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCCategory_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C628D9DB8326AC2F51DF74D75CDE71 /* NSDictionary+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Utils.m"; path = "WCCategory/Classes/Foundation/NSDictionary+Utils.m"; sourceTree = "<group>"; };
 		D8760DC56A697F5C4BCBFC8FB121961B /* UILabel+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Utils.h"; path = "WCCategory/Classes/UIKit/UILabel+Utils.h"; sourceTree = "<group>"; };
 		DD458AF99DE6C3F28127EB2654B2A8D0 /* UINavigationController+PopAfterPush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+PopAfterPush.m"; path = "WCCategory/Classes/UIKit/UINavigationController+PopAfterPush.m"; sourceTree = "<group>"; };
@@ -301,6 +309,8 @@
 				899D01BDD28F6C758F026CF07EC272D6 /* NSArray+Utils.m */,
 				5DAB83297E036E319E8B46196AB542A0 /* NSAttributedString+Utils.h */,
 				67709B27C7995245BF446BA88159DC0E /* NSAttributedString+Utils.m */,
+				605A5DB8243F95A1000FBBDE /* NSData+md5.h */,
+				605A5DBA243F95A1000FBBDE /* NSData+md5.m */,
 				1C001AF81876BCAF2ECEDD79FB9A836A /* NSDate+Utils.h */,
 				0F8AD3A48737C3FE74517082737C4486 /* NSDate+Utils.m */,
 				E12008B794E96907D5D2CBD3202C0CEE /* NSDictionary+Utils.h */,
@@ -311,6 +321,8 @@
 				1C2A736407B6AE198E3FEAD7BE04BD6E /* NSObject+DTFix.m */,
 				1A538EFF5DB09A081A096B350D48AF93 /* NSObject+Utils.h */,
 				3C9F9CEEA95D924B713C9171D587044F /* NSObject+Utils.m */,
+				605A5DBB243F95A1000FBBDE /* NSString+md5.h */,
+				605A5DB9243F95A1000FBBDE /* NSString+md5.m */,
 				8E6D293E19707BE327E5AC0CAFE72EAA /* NSString+Utils.h */,
 				078E66AB4B956D0452028C92296265A2 /* NSString+Utils.m */,
 				4A3B5069B3A5AF92C816333D61F31B3B /* NSURL+Utils.h */,
@@ -410,7 +422,6 @@
 				45E4BEB48F67ECE4946F86A2669DF19F /* Support Files */,
 				820C839EC049005CB82FAAF13AFDCB95 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -536,6 +547,7 @@
 			files = (
 				369B5460CA40E374B4DEEB01B7B0DC3D /* NSArray+Utils.h in Headers */,
 				13519F132A39BC9F4557283F02649CD6 /* NSAttributedString+Utils.h in Headers */,
+				605A5DBC243F95A1000FBBDE /* NSData+md5.h in Headers */,
 				59B923931913E9411FD1A4EA019DA1C9 /* NSDate+Utils.h in Headers */,
 				43638D2E1B536AFC1766501CF32647E7 /* NSDictionary+Utils.h in Headers */,
 				8D8234308C0D2A083E065E5EE3E0D045 /* NSJSONHelper.h in Headers */,
@@ -554,6 +566,7 @@
 				5545572C53F2DB1639B6380306E6BC28 /* UITableView+Utils.h in Headers */,
 				A2579484F5B5E8ABE0293C957A71F0DA /* UIView+animation.h in Headers */,
 				DA2449FE202AC8E57CC4F1D0381C253C /* UIView+Utils.h in Headers */,
+				605A5DBF243F95A1000FBBDE /* NSString+md5.h in Headers */,
 				4834597A4800151E2E3D4E9FEBA008BC /* UIViewController+Utils.h in Headers */,
 				2127E8600E8F21AA7D84E43242A342B2 /* WCCategory+NS.h in Headers */,
 				07454ECACD4E64E68489296A28F1A087 /* WCCategory+UI.h in Headers */,
@@ -739,6 +752,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9372C443DD83D442945B4DAA4199B0 /* NSArray+Utils.m in Sources */,
+				605A5DBE243F95A1000FBBDE /* NSData+md5.m in Sources */,
 				0B49450A3DA506372D1967167BBC5B49 /* NSAttributedString+Utils.m in Sources */,
 				8D572280F01CDAB61800461353411E08 /* NSDate+Utils.m in Sources */,
 				FEB735F0AEEC1341D1E5F6E248CEECB3 /* NSDictionary+Utils.m in Sources */,
@@ -756,6 +770,7 @@
 				A62DBACD389B3AD174F95185F961DBF6 /* UILabel+Utils.m in Sources */,
 				83BF2A9E8E9A1312F8BFE39F5AEC1AC0 /* UINavigationController+PopAfterPush.m in Sources */,
 				A2BCE425A0BF636C0DB1AEEF39828528 /* UITableView+Utils.m in Sources */,
+				605A5DBD243F95A1000FBBDE /* NSString+md5.m in Sources */,
 				AF233DCAD4C79FE2E0CFC94DB8C82F50 /* UIView+animation.m in Sources */,
 				2BC38807183166CDC65BE79DDF89C034 /* UIView+Utils.m in Sources */,
 				53FAA25A796E7C576675ACC28F5DB95D /* UIViewController+Utils.m in Sources */,
@@ -904,8 +919,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

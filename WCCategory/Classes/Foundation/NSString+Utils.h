@@ -62,8 +62,6 @@ extern NSString *FFURLEncode(NSString *input);
 
 + (NSString *)timeFormatted:(NSInteger)totalSeconds;
 
-+ (NSString *)createUUID;
-
 @end
 
 
