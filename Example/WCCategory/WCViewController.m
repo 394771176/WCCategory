@@ -39,13 +39,13 @@
     
     UICREATEImageTo(vv, UIImageView, 0, 0, 0, 0, AAL, CCCenter, nil, self);
     
-    UICREATELabelTo(vv, UILabel, 0, 0, 0, 0, AAL, nil, TTLeft, nil, nil, self);
+//    UICREATELabelTo(vv, UILabel, 0, 0, 0, 0, AAL, nil, TTLeft, nil, nil, self);
     
     UICREATEControlTo(vv, UIControl, 0, 0, 0, 0, AAL, self, nil, self);
     
     UICREATEBtnImgTo(vv, UIButton, 0, 0, 0, 0, AALRTB, nil, self, nil, self);
     
-    UICREATEBtnTxtTo(vv, UIButton, 0, 0, 0, 0, AAL, nil, nil, nil, nil, nil, self);
+//    UICREATEBtnTxtTo(vv, UIButton, 0, 0, 0, 0, AAL, nil, nil, nil, nil, nil, self);
     
 //    NSString *str = @"";
 //    str = str.md5Hash;

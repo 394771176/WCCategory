@@ -1,6 +1,6 @@
 {
   "name": "WCCategory",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "summary": "WCCategory",
   "description": "常见宏、常用基础类扩展方法",
   "homepage": "https://github.com/394771176/WCCategory",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/394771176/WCCategory.git",
-    "tag": "0.1.4"
+    "tag": "0.1.6"
   },
   "platforms": {
     "ios": "8.0"
