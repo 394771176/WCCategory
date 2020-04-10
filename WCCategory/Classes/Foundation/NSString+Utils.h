@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "NSString+md5.h"
 
 // 占位符
 extern NSString *FFPlaceholderChar(void);
