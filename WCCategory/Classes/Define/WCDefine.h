@@ -94,7 +94,7 @@ Method modifiedInitMethod = class_getInstanceMethod(self, _method2_); \
 method_exchangeImplementations(originalInitMethod, modifiedInitMethod); \
 }
 
-#define WC_Swizzle_Class(_method1_, _method2_) \
+#define WC_Swizzle(_method1_, _method2_) \
 { \
 Method originalInitMethod = class_getClassMethod(self, _method1_); \
 Method modifiedInitMethod = class_getClassMethod(self, _method2_); \
