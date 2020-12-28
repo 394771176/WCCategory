@@ -167,3 +167,11 @@ extern NSString *FFURLEncode(NSString *input);
 
 @end
 
+@interface NSString (Time)
+
+//分：秒，如 01：09， 一分零九秒， 90：10，九十分十秒，不会转成小时
++ (NSString *)minAndSecFromTime:(NSInteger)time;
+//时：分：秒，如 01：09 或 01：30：10， 小时有才会显示
++ (NSString *)hourMinAndSecFromTime:(NSInteger)time;
+
+@end

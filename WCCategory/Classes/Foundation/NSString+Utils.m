@@ -803,3 +803,26 @@ NSString *FFURLEncode(NSString *input) {
 }
 
 @end
+
+@implementation NSString (Time)
+
++ (NSString *)minAndSecFromTime:(NSInteger)time
+{
+    NSInteger min = time / 60;
+    NSInteger sec = time % 60;
+    return [NSString stringWithFormat:@"%02zd:%02zd", min, sec];
+}
+
++ (NSString *)hourMinAndSecFromTime:(NSInteger)time
+{
+    NSInteger hour = time / 3600;
+    NSInteger min = time % 3600 / 60;
+    NSInteger sec = time % 60;
+    if (hour > 0) {
+        return [NSString stringWithFormat:@"%02zd:%02zd:%02zd", hour, min, sec];
+    } else {
+        return [NSString stringWithFormat:@"%02zd:%02zd", min, sec];
+    }
+}
+
+@end
