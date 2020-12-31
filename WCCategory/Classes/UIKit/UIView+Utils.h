@@ -38,8 +38,6 @@
 - (void)setTop:(CGFloat)top andWidth:(CGFloat)width;
 - (void)setLeft:(CGFloat)left andWidth:(CGFloat)width;
 
-- (void)setBackgroundColorStr:(NSString *)backgroundColorStr;
-
 @end
 
 @interface UIView (Utils)
@@ -76,7 +74,7 @@
 - (void)setLayerBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor cornerRadius:(CGFloat)cornerRadius;
 - (void)setLayerBorderWidth:(CGFloat)borderWidth borderColorStr:(NSString *)borderColorStr cornerRadius:(CGFloat)cornerRadius;
 
-- (void)setBackgroundColorString:(NSString *)colorString;
+- (void)setBackgroundColorStr:(NSString *)backgroundColorStr;
 
 + (UIView *)clearColorView:(CGRect)frame;
 

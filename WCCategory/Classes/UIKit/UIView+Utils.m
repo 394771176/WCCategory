@@ -184,13 +184,6 @@
     self.frame = CGRectMake(left, self.top, width, self.height);
 }
 
-- (void)setBackgroundColorStr:(NSString *)backgroundColorStr
-{
-    if (backgroundColorStr.length) {
-        [self setBackgroundColor:[UIColor colorWithString:backgroundColorStr]];
-    }
-}
-
 @end
 
 @implementation UIView (Utils)
@@ -324,10 +317,10 @@
     self.layer.masksToBounds = YES;
 }
 
-- (void)setBackgroundColorString:(NSString *)colorString
+- (void)setBackgroundColorStr:(NSString *)backgroundColorStr
 {
-    if (colorString.length) {
-        [self setBackgroundColor:[UIColor colorWithString:colorString]];
+    if (backgroundColorStr.length) {
+        [self setBackgroundColor:[UIColor colorWithString:backgroundColorStr]];
     }
 }
 
