@@ -804,6 +804,7 @@ NSString *FFURLEncode(NSString *input) {
 
 @end
 
+
 @implementation NSString (Time)
 
 + (NSString *)minAndSecFromTime:(NSInteger)time
@@ -818,10 +819,16 @@ NSString *FFURLEncode(NSString *input) {
     NSInteger hour = time / 3600;
     NSInteger min = time % 3600 / 60;
     NSInteger sec = time % 60;
+    return [NSString stringWithFormat:@"%02zd:%02zd:%02zd", hour, min, sec];
+}
+
++ (NSString *)hourMinAndSecAutoFromTime:(NSInteger)time
+{
+    NSInteger hour = time / 3600;
     if (hour > 0) {
-        return [NSString stringWithFormat:@"%02zd:%02zd:%02zd", hour, min, sec];
+        return [self hourMinAndSecFromTime:time];
     } else {
-        return [NSString stringWithFormat:@"%02zd:%02zd", min, sec];
+        return [self minAndSecFromTime:time];
     }
 }
 

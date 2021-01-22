@@ -171,7 +171,10 @@ extern NSString *FFURLEncode(NSString *input);
 
 //分：秒，如 01：09， 一分零九秒， 90：10，九十分十秒，不会转成小时
 + (NSString *)minAndSecFromTime:(NSInteger)time;
-//时：分：秒，如 01：09 或 01：30：10， 小时有才会显示
+//时：分：秒，如 00：01：09 或 01：30：10
 + (NSString *)hourMinAndSecFromTime:(NSInteger)time;
+// 显示时间 时：分：秒， 当小于一小时时，显示  分：秒
+// 适合使用在列表展示时，如果倒计时从1小时到59分会跳动，可以使用hourMinAndSec 固定格式
++ (NSString *)hourMinAndSecAutoFromTime:(NSInteger)time;
 
 @end

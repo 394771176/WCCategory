@@ -181,7 +181,21 @@ NSArray *FFMergeArraies(NSArray *first, NSArray *second) {
     return index != NSNotFound ? self[index] : nil;
 }
 
-- (NSArray *)subArrayWithIndex:(NSInteger)index group:(NSInteger)group {
+- (NSArray *)subGroupArrayWithGroup:(NSInteger)group
+{
+    if (group<=0) {
+        return nil;
+    }
+    int n = ceil(self.count * 1.f / group);
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i=0; i<n; i++) {
+        [array safeAddObject:[self subGroupArrayWithGroup:group forIndex:i]];
+    }
+    return array;
+}
+
+- (NSArray *)subGroupArrayWithGroup:(NSInteger)group forIndex:(NSInteger)index
+{
     if (index<0||group<=0) {
         return nil;
     }

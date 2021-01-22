@@ -26,8 +26,10 @@ extern NSArray *FFMergeArraies(NSArray *first, NSArray *second);
 - (NSArray *)sortedArrayWithKeys:(NSArray *)keys ascending:(BOOL)ascending;
 - (NSArray *)sortedArrayWithKeys:(NSArray *)keys ascendings:(NSArray*)ascendings;
 
-// 将数组 以group的数量 划分 ,返回第index 个子数组
-- (NSArray *)subArrayWithIndex:(NSInteger)index group:(NSInteger)group;
+// 将数组 以group的数量 划分成二维数组
+- (NSArray *)subGroupArrayWithGroup:(NSInteger)group;
+// 将数组 以group的数量 划分成二维数组 ,并返回第index个子数组
+- (NSArray *)subGroupArrayWithGroup:(NSInteger)group forIndex:(NSInteger)index;
 
 + (instancetype)safeArrayWithObject:(id)object;
 
