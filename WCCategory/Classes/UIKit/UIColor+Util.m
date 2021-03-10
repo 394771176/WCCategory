@@ -18,6 +18,11 @@
 
 + (UIColor *)colorWithAlphaString:(NSString *)hexStr
 {
+    if ([hexStr isKindOfClass:UIColor.class]) {
+        return (id)hexStr;
+    } else if (![hexStr isKindOfClass:NSString.class]) {
+        return UIColor.blackColor;
+    }
     NSArray *hexArray = [hexStr componentsSeparatedByString:@"-"];
     if (hexArray.count==2) {
         return [self colorWithHexString:hexArray[0] alpha:[hexArray[1] floatValue]/100.0f];

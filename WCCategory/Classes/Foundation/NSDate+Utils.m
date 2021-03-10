@@ -225,34 +225,35 @@ NSTimeInterval WCTimeIntervalWithSecondsSince1970(void) {
     
     return string;
 }
+
 - (NSInteger)year
 {
-    return [self components].year;
+    return [self componentsYMDHMS].year;
 }
 
 - (NSInteger)month
 {
-    return [self components].month;
+    return [self componentsYMDHMS].month;
 }
 
 - (NSInteger)day
 {
-    return [self components].day;
+    return [self componentsYMDHMS].day;
 }
 
 - (NSInteger)hour
 {
-    return [self components].hour;
+    return [self componentsYMDHMS].hour;
 }
 
 - (NSInteger)minute
 {
-    return [self components].minute;
+    return [self componentsYMDHMS].minute;
 }
 
 - (NSInteger)second
 {
-    return [self components].second;
+    return [self componentsYMDHMS].second;
 }
 
 - (NSDateComponents *)components
